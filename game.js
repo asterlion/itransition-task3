@@ -20,7 +20,7 @@ function validateMoves(moves) {
 }
 
 function generateKey() {
-    return crypto.randomBytes(32).toString('hex'); // 256 bits key
+    return crypto.randomBytes(32).toString('hex');
 }
 
 function generateHMAC(key, message) {
@@ -55,20 +55,20 @@ function handleUserMove() {
     rl.question('Enter your move: ', (userInput) => {
         if (userInput === 'hlp') {
             HelpPrinter.printHelp(moves);
-            handleUserMove(); // Wait for user move after showing help
+            handleUserMove();
             return;
         }
 
         if (userInput === '0') {
             console.log('Exiting the game.');
-            rl.close(); // Close the readline interface and exit the program
+            rl.close();
             return;
         }
 
         const userMoveIndex = parseInt(userInput, 10) - 1;
         if (isNaN(userMoveIndex) || userMoveIndex < 0 || userMoveIndex >= moves.length) {
             console.log('Invalid option. Please try again.');
-            handleUserMove(); // Wait for user move after invalid input
+            handleUserMove();
             return;
         }
 
@@ -86,13 +86,13 @@ function handleUserMove() {
         }
         console.log(`HMAC key: ${key}`);
         console.log('========================================');
-        handleUserMove(); // Wait for user move after showing result
+        handleUserMove();
     });
 }
 
 function main() {
     validateMoves(moves);
-    handleUserMove(); // Start the game loop
+    handleUserMove();
 }
 
 main();

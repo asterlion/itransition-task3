@@ -1,4 +1,3 @@
-// MoveGenerator.js
 class MoveGenerator {
     constructor(moves) {
         this.moves = moves;

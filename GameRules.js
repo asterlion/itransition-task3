@@ -1,4 +1,3 @@
-// GameRules.js
 class GameRules {
     constructor(moves) {
         this.moves = moves;

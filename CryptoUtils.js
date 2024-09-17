@@ -1,9 +1,8 @@
-// CryptoUtils.js
 const crypto = require('crypto');
 
 class CryptoUtils {
     static generateSecretKey() {
-        return crypto.randomBytes(32).toString('hex'); // 256-bit key
+        return crypto.randomBytes(32).toString('hex');
     }
 
     static generateHMAC(message, key) {

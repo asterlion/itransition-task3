@@ -25,6 +25,7 @@ async function main() {
   if (args.length % 2 === 0 || args.length < 3) {
     console.log('Error: The number of moves must be an odd number ≥ 3.');
     console.log('Usage: node game.js <move1> <move2> ... <moveN>');
+	console.log('Example of correct usage: node game.js Rock Paper Scissors');
     return;
   }
 
@@ -32,6 +33,7 @@ async function main() {
   if (moves.length !== args.length) {
     console.log('Error: All moves must be unique.');
     console.log('Usage: node game.js <move1> <move2> ... <moveN>');
+	console.log('Example of correct usage: node game.js Rock Paper Scissors');
     return;
   }
 
